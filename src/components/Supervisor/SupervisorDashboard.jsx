@@ -5,7 +5,7 @@ const SupervisorDashboard = () => {
         <>
         <h1>Supervisor dashboard</h1>
         <div>
-            <h2>hello</h2>
+            <h2>hello 22</h2>
         </div>
         </>
     );
