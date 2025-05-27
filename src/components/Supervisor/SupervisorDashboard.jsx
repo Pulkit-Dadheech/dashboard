@@ -3,7 +3,11 @@ import React from 'react';
 const SupervisorDashboard = () => {
     return (
         <>
-        <h1>Supervisor dashboard</h1></>
+        <h1>Supervisor dashboard</h1>
+        <div>
+            <h2>hello</h2>
+        </div>
+        </>
     );
 }
 
