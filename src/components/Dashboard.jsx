@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import { useSidebar } from "../context/SidebarContext";
 import MainNavbar from "./Navbar/MainNavbar";
 import RetailDashboard from "./Retail/RetailDashboard";
-import SupervisorDashboard from "./supervisor/SupervisorDashboard";
+import SupervisorDashboard from "./Supervisor/SupervisorDashboard";
 
 export const Dashboard = () => {
   const { activeSection, setActiveSection } = useSidebar("supervisor");
