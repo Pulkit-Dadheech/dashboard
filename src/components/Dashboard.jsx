@@ -6,7 +6,7 @@ import RetailDashboard from "./Retail/RetailDashboard";
 import SupervisorDashboard from "./supervisor/SupervisorDashboard";
 
 export const Dashboard = () => {
-  const { activeSection, setActiveSection } = useSidebar("retailer");
+  const { activeSection, setActiveSection } = useSidebar("supervisor");
   const sidebarSections = ["supervisor", "retailer"];
   const sidebarIcons = [null, null]; // Use null for no icons
   const sidebarNames = ["Network Rail Supervisor", "Network Rail Retailer"];
