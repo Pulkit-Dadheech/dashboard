@@ -379,7 +379,7 @@ const SupervisorDashboard = () => {
             </div>
 
             {/* Peak hours and Asset Usage charts */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div className="grid grid-cols-[60%_40%] h-100 w-full gap-2 p-4">
                 {/* Peak hours line chart */}
                 <div className="bg-white rounded border p-4">
                     <div className="flex items-center mb-2">
@@ -388,7 +388,7 @@ const SupervisorDashboard = () => {
                     </div>
                     <hr className="mb-4" />
                     <div className="w-full" style={{ minHeight: 220, maxHeight: 260, overflow: 'hidden' }}>
-                        <Line data={peakHoursData} options={peakHoursOptions} height={180} />
+                        <Line data={peakHoursData} options={peakHoursOptions} width={"400%"} height={180} />
                     </div>
                 </div>
                 {/* Asset Usage bar chart */}
@@ -398,7 +398,7 @@ const SupervisorDashboard = () => {
                     </div>
                     <hr className="mb-4" />
                     <div className="w-full" style={{ minHeight: 220, maxHeight: 260, overflow: 'hidden' }}>
-                        <Bar data={assetUsageData} options={assetUsageOptions} height={180} />
+                        <Bar data={assetUsageData} options={assetUsageOptions} height={200} />
                     </div>
                 </div>
             </div>
