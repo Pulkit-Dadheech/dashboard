@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { FiDownload } from "react-icons/fi"; // Add this import
 
 const RetailNavbar = () => {
   const [startDate, setStartDate] = useState("");
@@ -38,19 +39,6 @@ const RetailNavbar = () => {
           </span>
           {/* Right: Dropdowns and Date Range */}
           <div className="flex items-center space-x-3">
-            <select className="border border-gray-300 px-2 py-1 text-xs rounded">
-              <option value="">Select Category</option>
-              <option value="electronics">Electronics</option>
-              <option value="fashion">Fashion</option>
-              <option value="grocery">Grocery</option>
-            </select>
-            <select className="border border-gray-300 px-2 py-1 text-xs rounded">
-              <option value="">Select Region</option>
-              <option value="north">North</option>
-              <option value="south">South</option>
-              <option value="east">East</option>
-              <option value="west">West</option>
-            </select>
             {/* Date Range Column */}
             <div className="relative" ref={pickerRef}>
               <button
@@ -88,6 +76,28 @@ const RetailNavbar = () => {
                 </div>
               )}
             </div>
+            <select className="border border-gray-300 px-2 py-1 text-xs rounded">
+              <option value="">Select Category</option>
+              <option value="electronics">Electronics</option>
+              <option value="fashion">Fashion</option>
+              <option value="grocery">Grocery</option>
+            </select>
+            <select className="border border-gray-300 px-2 py-1 text-xs rounded">
+              <option value="">Select Region</option>
+              <option value="north">North</option>
+              <option value="south">South</option>
+              <option value="east">East</option>
+              <option value="west">West</option>
+            </select>
+            
+            {/* Export Button */}
+            <button
+              type="button"
+              className="flex items-center border border-blue-300 text-blue-300 hover:bg-blue-100 px-3 py-1 text-xs rounded transition-colors duration-150 ml-2"
+            >
+              Export
+              <FiDownload className="ml-1" size={16} />
+            </button>
           </div>
         </div>
       </div>
