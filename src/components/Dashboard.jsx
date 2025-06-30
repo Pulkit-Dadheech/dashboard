@@ -9,7 +9,7 @@ export const Dashboard = () => {
   const { activeSection, setActiveSection } = useSidebar("supervisor");
   const sidebarSections = ["supervisor", "retailer"];
   const sidebarIcons = [null, null]; // Use null for no icons
-  const sidebarNames = ["Network Rail Supervisor", "Network Rail Retailer"];
+  const sidebarNames = ["Supervisor", "Retailer"];
 
   return (
     <>

@@ -34,7 +34,7 @@ const SupervisorNavbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Left: Title */}
           <span className="text-xl font-bold text-gray-500">
-            Network Rail Supervisor
+            Supervisor
           </span>
 
           <span>
