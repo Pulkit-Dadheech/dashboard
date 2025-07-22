@@ -3,8 +3,6 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 
 const SupervisorCard = (props) => {
   const title = props.title || "Default Title";
-  const days = props.days || 5;
-  const percentage = props.percentage || 10;
   const value = props.value || 100;
   const Icon = props.icon || AiOutlineAreaChart;
 

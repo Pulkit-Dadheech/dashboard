@@ -1,5 +1,4 @@
-import React, { act } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { useSidebar } from "../../context/SidebarContext";
 
 const SidebarButton = (props) => {
