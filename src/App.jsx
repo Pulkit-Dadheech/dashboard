@@ -1,21 +1,38 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Dashboard } from "./components/Dashboard"; // Import the Dashboard component
-import NotFound from "./NotFound"; // Add this line
-import { SidebarProvider } from "./context/SidebarContext";
 
-function App() {
-  return (
+import { SidebarProvider } from "./context/SidebarContext";
+import { MyProvider } from "./context/MyContext";
+import { AlertProvider } from "./context/AlertContext.js";
+import { AuthProvider } from "./context/AuthContext.js";
+import { HvProvider } from "@hitachivantara/uikit-react-core";
+
+import { Dashboard } from "./components/Dashboard";
+import NotFound from "./NotFound";
+
+const App = (props) => {
+  const token = props?.keycloak?.token || null;
+
+  const Wrapped = () => (
     <SidebarProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          {/* <Route path="/about" element={<About />} /> */}
-          <Route path="*" element={<NotFound />} /> {/* Show NotFound for unknown routes */}
-        </Routes>
-      </BrowserRouter>
+      <HvProvider>
+        <AlertProvider>
+          <MyProvider initialToken={token}>
+            <BrowserRouter basename={props?.basename || "/"}>
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </MyProvider>
+        </AlertProvider>
+      </HvProvider>
     </SidebarProvider>
   );
-}
+
+  return props?.keycloak
+    ? <AuthProvider keycloak={props.keycloak}><Wrapped /></AuthProvider>
+    : <Wrapped />;
+};
 
 export default App;
