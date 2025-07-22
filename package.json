@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "craco start",
-    "build": "craco build && mv build dist",
+    "build": "craco build && node -e \"require('fs').cpSync('build', 'dist', {recursive: true})\"",
     "start": "craco start",
     "test": "craco test",
     "lint": "eslint .",
