@@ -2,10 +2,11 @@
   "name": "dashboard",
   "private": true,
   "version": "0.0.0",
+  "homepage": "./",
   "type": "module",
   "scripts": {
     "dev": "craco start",
-    "build": "craco build",
+    "build": "craco build && mv build dist",
     "start": "craco start",
     "test": "craco test",
     "lint": "eslint .",
