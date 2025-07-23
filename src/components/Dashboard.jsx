@@ -5,7 +5,7 @@ import MainNavbar from "./Navbar/MainNavbar";
 import RetailDashboard from "./Retail/RetailDashboard";
 import SupervisorDashboard from "./Supervisor/SupervisorDashboard";
 
-export const Dashboard = () => {
+const Dashboard = () => {
   const { activeSection, setActiveSection } = useSidebar("supervisor");
   const sidebarSections = ["supervisor", "retailer"];
   const sidebarIcons = [null, null]; // Use null for no icons
@@ -35,3 +35,5 @@ export const Dashboard = () => {
     </>
   );
 };
+
+export default Dashboard;
