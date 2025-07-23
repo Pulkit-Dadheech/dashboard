@@ -258,7 +258,7 @@ const SupervisorDashboard = () => {
                         <div className="grid grid-cols-2 gap-2 mt-4">
                             {/* Station 1 */}
                             <div className="bg-white rounded ">
-                                <select className="border border-gray-300 ml-3 my-3 px-2 py-1 text-xs rounded">
+                                <select className="border border-gray-300 h-8 w-40 ml-3 my-3 px-2 py-1 text-xs rounded">
                                     <option value="">Paddington </option>
                                     <option value="electronics">option 1</option>
                                     <option value="fashion">option 2</option>
@@ -274,7 +274,7 @@ const SupervisorDashboard = () => {
                             </div>
                             {/* Station 2 */}
                             <div className="bg-white rounded ">
-                                <select className="border border-gray-300 ml-3 my-3 px-2 py-1 text-xs rounded">
+                                <select className="border border-gray-300 h-8 w-40 ml-3 my-3 px-2 py-1 text-xs rounded">
                                     <option value="">King Cross </option>
                                     <option value="electronics">option 1</option>
                                     <option value="fashion">option 2</option>
